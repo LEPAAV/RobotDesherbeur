@@ -20,13 +20,13 @@ class Grass_position():
 		self.pub = rospy.Publisher("Grass_position", Point,queue_size=10)
 		rospy.Subscriber("DISTANCE", Float64, self.callback_distance_herb)
 		rospy.Subscriber("ORIENTATION", Float64, self.callback_theta)
-		rospy.Subscriber("/position", Float64, self.callback_robot)
+		rospy.Subscriber("/position", Pose2D, self.callback_robot)
 
 	def callback_distance_herb(self, message):
-		self.distance_herb = message
+		self.distance_herb = message.data
 
 	def callback_theta(self, message):
-		self.theta_herb = message
+		self.theta_herb = message.data
 
 	def callback_robot(self, message):
 		self.position_robot = message
