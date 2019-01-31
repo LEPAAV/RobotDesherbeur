@@ -71,6 +71,7 @@ def get_bounding_box(img,disp = False):
 		# print(x,y,w,h)
 	else :
 		x,y,w,h =0,0,0,0
+		x,y,w,h = 1200,0,1,50
 	return x, y, w, h
 
 def get_central_point(x,y,w,h):
