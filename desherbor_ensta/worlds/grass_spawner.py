@@ -93,7 +93,7 @@ def destroy(data):
     global Herbey
     dist = []
 
-    DistanceMaxSuppression =0.2
+    DistanceMaxSuppression = 0.5
 
     for i in range(NbHerbe):
         dist.append(distance(X[i],Y[i],HerbeX,HerbeY))
@@ -138,6 +138,9 @@ def destroy(data):
         requestRespawn.initial_pose.orientation.w = 1.0
 
         gazeboSpawnModel(requestRespawn)
+
+        X[ind_min] = 1000000
+        Y[ind_min] = 1000000
     else :
         print "C'est bien trop loin"
 

@@ -23,5 +23,7 @@
 <node name="detection" pkg="desherbor_ensta" type="herb_position.py" output="screen"/>
 
 <node name="grass_position" pkg="desherbor_ensta" type="grass_position.py" output="screen"/>
+<node name="gen_position" pkg="gen_position" type="gen_position" output="screen"/>
+<node name="robotControl" pkg="desherbor_ensta" type="robotControl.py" output="screen"/>
 
 </launch>
