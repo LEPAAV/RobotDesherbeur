@@ -18,7 +18,7 @@ def commander_vitesse_roues(message, publishers):
     pub1, pub2, pub3 = publishers[0],publishers[1],publishers[2]
     r = message.data
     vitesse = 0.5*r + 0.3
-    print(r)
+    # print(r)
     if r > 0.167:
         pub1.publish(Float64(data = 2*vitesse))
         pub2.publish(Float64(data = 2*vitesse))

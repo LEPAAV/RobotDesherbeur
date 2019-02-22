@@ -57,11 +57,11 @@ def get_bounding_box(img,disp = False):
 
 		cv2.drawContours(Img, [contour], -1, 255, -1)
 
-		# if disp:
-		dirPath = os.path.dirname(__file__)
-		cv2.imwrite(os.path.join(dirPath,'detectee.png'),Img)
-		cv2.imshow('camera',Img)
-		cv2.waitKey(1)
+		if disp:
+			dirPath = os.path.dirname(__file__)
+			cv2.imwrite(os.path.join(dirPath,'detectee.png'),Img)
+			cv2.imshow('camera',Img)
+			cv2.waitKey(1)
 
 		M = cv2.moments(contour)
 		# center  = (M["m10"]/M["m00"],M["m01"]/M["m00"])
