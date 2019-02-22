@@ -57,11 +57,11 @@ def get_bounding_box(img,disp = False):
 
 		cv2.drawContours(Img, [contour], -1, 255, -1)
 
-		# if disp:
-		dirPath = os.path.dirname(__file__)
-		cv2.imwrite(os.path.join(dirPath,'detectee.png'),Img)
-		cv2.imshow('camera',Img)
-		cv2.waitKey(1)
+		if disp:
+			dirPath = os.path.dirname(__file__)
+			cv2.imwrite(os.path.join(dirPath,'detectee.png'),Img)
+			cv2.imshow('camera',Img)
+			cv2.waitKey(1)
 
 		M = cv2.moments(contour)
 		# center  = (M["m10"]/M["m00"],M["m01"]/M["m00"])
@@ -71,7 +71,7 @@ def get_bounding_box(img,disp = False):
 		# print(x,y,w,h)
 	else :
 		x,y,w,h =0,0,0,0
-		x,y,w,h = 1200,0,1,50
+		x,y,w,h = 1200,0,1,40
 	return x, y, w, h
 
 def get_central_point(x,y,w,h):
