@@ -37,8 +37,8 @@ Rayon=[]
 HerbesStr = ""
 
 for i in range(NbHerbe):
-    x = 10 * random.random() -5
-    y = 10 * random.random()- 5
+    x = 9 * random.random() - 4.5
+    y = 9 * random.random() - 4.5
     rayon = 0.06*random.random() + 0.01
 
     X.append(x)
